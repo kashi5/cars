@@ -1,6 +1,6 @@
 
   ## Get Started 🚀  
-  - Clone the git repo using command ``` git clone <repo_link>```
+  - Clone the git repo using command ``` git clone https://github.com/kashi5/cars.git```
   - Install latest python 10+
   - Install virtual env ```python3 -m venv env```
   - Activate virtual env ``` source env/bin/active```

@@ -33,7 +33,7 @@ async def get_all_paginated_cars(db_session: Session = Depends(get_db)):
 
 
 @app.get("/car/filters", response_model=Page[CarFilterSchema])
-async def read_item(
+async def get_column_filters_for_car(
     filter_list: CarFilter = Query(
         ...,
         description="provide the attribute of the column you want to filter result, takes attriburte as name or brand",
