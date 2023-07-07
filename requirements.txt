@@ -1,0 +1,7 @@
+fastapi
+pydantic
+uvicorn
+SQLAlchemy
+databases
+sqlalchemy[asyncio]
+fastapi-pagination
