@@ -42,9 +42,14 @@ async def get_column_filters_for_car(
 ):
 
     if filter_list == "brand":
-        stmt = select(Car).distinct(Car.brand)
         return paginate(
-            db_session, stmt
-        )  # This result is invalid , as i require only unique car brand names in the db
+            db_session,
+            select(distinct(Car.brand)),
+            transformer=lambda items: [{"brand": brand} for brand in items],
+        )
     else:
-        return paginate(db_session, select(Car.name))
+        return paginate(
+            db_session,
+            select(Car.name),
+            transformer=lambda items: [{"name": name} for name in items],
+        )
